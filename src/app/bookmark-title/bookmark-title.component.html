@@ -1,0 +1,10 @@
+<a [href]="bookmark.url" target="_blank" class="bookmark-title">
+    <div class="title-icon" *ngIf="!favIconError">
+        <img [src]="titleIconSrc" alt="Icon da url" (error)="favIconError=true">
+    </div>
+    <div class="title-icon fallback" *ngIf="favIconError">
+        {{ bookmark.name.toUpperCase()[0] }}
+    </div>
+
+    <p class="title-text">{{ bookmark.name }}</p>
+</a>

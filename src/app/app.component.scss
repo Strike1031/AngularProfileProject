@@ -1,0 +1,84 @@
+/*Embrulho das seções*/
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+
+  /*background-image: url("https://images.unsplash.com/photo-1635233787807-2a4a212ddca3?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=1080&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTYzNTM1NDEyMA&ixlib=rb-1.2.1&q=80&w=1920");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;*/
+}
+
+.bg-img {
+    position: fixed;
+    z-index: -1;
+
+    height: 100%;
+    width: 100%;
+
+    object-fit: cover;
+}
+
+.change-bg-btn {
+  position: absolute;
+  padding: 10px;
+
+  top: 10px;
+  right: 10px;
+
+  background-color: rgba(black, 0.1);
+  color: rgba(white, 0.7);
+
+  &:hover {
+    background-color: rgba(black, 0.3);
+    color: white;
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+/*Seção superior*/
+.top-section {
+  //background-color: aquamarine;
+  text-align: center;
+
+  padding: 60px 0;
+
+  h1 {
+    font-size: 7rem;
+    font-weight: bold;
+    color: #f5f5f5;
+    text-shadow: 0px 1px 7px rgba(black, 0.1);
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    color: white;
+    text-shadow: 0px 1px 4px rgba(black, 0.1);
+  }
+}
+
+/*Seção de conteudo*/
+.content-section {
+  //background-color: blue;
+  flex-grow: 1;
+  /*O Min-height é para resolver o tamanho do conteudo com multiplos bookmark's*/
+  min-height: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/*Seção inferior*/
+.bottom-section {
+  //background-color: rebeccapurple;
+  display: flex;
+
+  app-tabs {
+    margin: auto;
+  }
+}
